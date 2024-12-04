@@ -28,6 +28,20 @@
 <xacro:property name="wheel_mass" value="${wheel_density*pi*wheel_link_radius*wheel_link_radius*wheel_link_length}" />
 
 <!-- Moments of inertia of wheel -->
+<xacro:property name="Iz_wheel" value="${0.5*wheel_mass*wheel_link_radius*wheel_link_radius}" /> <!-- MI about cylindrical axis-->
+<xacro:property name="I_wheel" 
+value = "${(1.0/12.0)*wheel_mass*(3.0*wheel_link_radius*wheel_link_radius + wheel_link_length*wheel_link_length)" />
+
+<!-- Inertia of wheel -->
+<xacro:property name="inertia_wheel">
+    <inertial>
+        <origin rpy="0 0 0" xyz="0 0 0" />
+        <mass value="${wheel_mass}"/>
+        <inertia ixx = "${I_wheel}" ixy = "0.0" ixz = "0.0" iyy = "${I_wheel}" iyz = "0" izz = "${Iz_wheel}" />
+    </inertial>
+</xacro:property>
+
+
 
 
 </robot>
