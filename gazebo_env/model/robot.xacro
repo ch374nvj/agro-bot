@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!-- ############################# -->
+<!-- Agro Bot Description -->
+<!-- Chetan VJ© -->
+
+<robot name = "differential_drive_robot" xmlns:xacro = "http://www.ros.org/wiki/xacro">
+
+<!-- Body Dimensions (units in meters)-->
+<xacro:property name="body_link_x_dim" value="0.79"/>
+<xacro:property name="body_link_y_dim" value="0.5"/>
+<xacro:property name="body_link_z_dim" value="0.13"/>
+
+<!-- Wheel Dimensions -->
+<xacro:property name="wheel_link_radius" value="0.125"/>
+<xacro:property name="wheel_link_length" value="0.05"/>
+<xacro:property name="wheel_link_z_loc" value="-0.05"/>
+
+<!-- Material Density -->
+<xacro:property name="body_density" value="2700"/>
+<xacro:property name="wheel_density" value="2700"/>
+
+<!-- Pi Constant -->
+<xacro:property name="pi" value="3.14159265"/>
+
+<!-- Robot Body & wheel mass -->
+<xacro:property name="body_mass" value="${body_density*body_link_x_dim*body_link_y_dim*body_link_z_dim}" />
+
+<xacro:property name="wheel_mass" value="${wheel_density*pi*wheel_link_radius*wheel_link_radius*wheel_link_length}" />
+
+<!-- Moments of inertia of wheel -->
+
+
+</robot>
