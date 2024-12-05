@@ -59,14 +59,14 @@ value = "${(1.0/12.0)*wheel_mass*(3.0*wheel_link_radius*wheel_link_radius + whee
 <link name="body_link" >
     <visual>
         <geometry>
-            <box size="$(body_link_x_dim) $(body_linky_dim) $(body_link_z_dim)" />
+            <box size="${body_link_x_dim} ${body_linky_dim} ${body_link_z_dim}" />
         </geometry>
     <origin rpy="0 0 0" xyz="0 0 0" />
     </visual>
 
     <collision>
         <geometry>
-            <box size="$(body_link_x_dim) $(body_link_y_dim) $(body_link_z_dim)" />
+            <box size="${body_link_x_dim} ${body_link_y_dim} ${body_link_z_dim}" />
         </geometry>
     </collision>
 
