@@ -20,7 +20,7 @@
 <xacro:property name="wheel_density" value="2700"/>
 
 <!-- Pi Constant -->
-<xacro:property name="pi" value="3.14159265"/>
+<xacro:property name="pi_const" value="3.14159265"/>
 
 <!-- Robot Body & wheel mass -->
 <xacro:property name="body_mass" value="${body_density*body_link_x_dim*body_link_y_dim*body_link_z_dim}" />
@@ -41,7 +41,43 @@ value = "${(1.0/12.0)*wheel_mass*(3.0*wheel_link_radius*wheel_link_radius + whee
     </inertial>
 </xacro:property>
 
+<!-- Include extra Gazebo options & motion control driver  -->
+<xacro:include filename="$(find gazebo_env)/model/robot.gazebo" />
 
+<!-- ################################################# -->
+<!-- LINKS & JOINTS -->
+<!-- ################################################# -->
 
+<!-- Dummy link -->
+<link name="dummy" />
+<joint name= "dummy_joint" type="fixed">
+    <parent link="dummy" />
+    <child  link="body_link" />
+</joint>
 
+<!-- Body Link -->
+<link name="body_link" >
+    <visual>
+        <geometry>
+            <box size="$(body_link_x_dim) $(body_linky_dim) $(body_link_z_dim)" />
+        </geometry>
+    <origin rpy="0 0 0" xyz="0 0 0" />
+    </visual>
+
+    <collision>
+        <geometry>
+            <box size="$(body_link_x_dim) $(body_link_y_dim) $(body_link_z_dim)" />
+        </geometry>
+    </collision>
+
+    <inertial>
+        <origin rpy="0 0 0" xyz="0 0 0" />
+        <mass value="$(body_mass)" />
+        <inertia    ixx="${(1/12)*body_mass*(body_link_y_dim*body_link_y_dim + body_link_z_dim*body_link_z_dim)}"
+                    iyy="${(1/12)*body_mass*(body_link_x_dim*body_link_x_dim + body_link_z_dim*body_link_z_dim)}"
+                    izz="${(1/12)*body_mass*(body_link_y_dim*body_link_y_dim + body_link_x_dim*body_link_x_dim)}"
+                    ixy="0" ixz="0" iyz="0"
+        />
+    </inertial>
+</link>
 </robot>
