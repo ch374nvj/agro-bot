@@ -42,6 +42,7 @@ value = "${(1.0/12.0)*wheel_mass*(3.0*wheel_link_radius*wheel_link_radius + whee
 </xacro:macro>
 
 <!-- Include extra Gazebo options & motion control driver  -->
+<!-- 'gazebo_env'is the package name -->
 <xacro:include filename="$(find gazebo_env)/model/robot.gazebo" />
 
 <!-- ################################################# -->
