@@ -25,3 +25,52 @@ world_path = os.path.join(get_package_share_directory(pkg_name), world_rel_path)
 #Get robot description from xacro file
 robot_description = xacro.process_file(xacro_path).toxml()
 
+#Launch file from gazebo_ros package
+gazebo_rospkg_launch = PythonLaunchDescriptionSource(
+    os.path.join(
+        get_package_share_directory('gazebo_ros'), 
+        'launch', 
+        'gazebo.launch.py'
+    )
+)
+
+#Launch description of above
+gazebo_world_launch = IncludeLaunchDescription(
+    gazebo_rospkg_launch,
+    launch_arguments={
+        'world':world_path
+    }.items()
+)
+
+#gazebo_ros Node to spawn model
+spawn_model_node = Node(
+    package='gazebo_ros',
+    executable='spawn_entity.py',
+    arguments=['-topic', 'robot_description', '-entity', robot_xacro_name],
+    output='screen'
+)
+
+#Robot State publisher node
+robot_state_pub_node = Node(
+    package='robot_state_publisher',
+    executable='robot_state_publisher',
+    output='screen',
+    parameters=[{
+        'robot_description' : robot_description,
+        'use_sim_time':True
+    }]
+)
+
+#Create Empty Launch description object
+launch_description_obj = LaunchDescription()
+
+#add gazebo_ros launch desc
+launch_description_obj.add_action(gazebo_world_launch)
+
+#add nodes to launch desc
+launch_description_obj.add_action(spawn_model_node)
+launch_description_obj.add_action(robot_state_pub_node)
+
+return launch_description_obj
+
+
