@@ -31,6 +31,7 @@ install(
   DIRECTORY 
     launch
     model
+    config
     # worlds
   DESTINATION 
     share/${PROJECT_NAME}/

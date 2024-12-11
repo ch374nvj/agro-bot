@@ -43,6 +43,14 @@ def generate_launch_description():
         }.items()
     )
 
+    rviz2_launch_node = Node(
+        package='rviz2',
+        namespace='',
+        executable='rviz2',
+        name='rviz',
+        arguments=['-d' + os.path.join(get_package_share_directory(pkg_name), 'config', 'config.rviz')]
+    )
+
     #gazebo_ros Node to spawn model
     spawn_model_node = Node(
         package='gazebo_ros',
@@ -71,5 +79,6 @@ def generate_launch_description():
     #add nodes to launch desc
     launch_description_obj.add_action(spawn_model_node)
     launch_description_obj.add_action(robot_state_pub_node)
+    launch_description_obj.add_action(rviz2_launch_node)
 
     return launch_description_obj
