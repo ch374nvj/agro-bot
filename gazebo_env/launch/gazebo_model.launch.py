@@ -16,7 +16,7 @@ def generate_launch_description():
     #relative paths
     xacro_rel_path = 'model/robot.xacro'
 
-    world_rel_path = 'model/empty_world.world'
+    world_rel_path = 'model/agri_env.world'
 
     #Absolute paths
     xacro_path = os.path.join(get_package_share_directory(pkg_name), xacro_rel_path)
@@ -55,7 +55,9 @@ def generate_launch_description():
     spawn_model_node = Node(
         package='gazebo_ros',
         executable='spawn_entity.py',
-        arguments=['-topic', 'robot_description', '-entity', robot_xacro_name, '-x', '-18.4387', '-y', "-41.5350", '-z', "-0.7494"],
+        arguments=['-topic', 'robot_description', '-entity', robot_xacro_name, 
+        '-x', '-18.4387', '-y', "-41.5350", '-z', "-0.7494"
+        ],
         output='screen'
     )
 

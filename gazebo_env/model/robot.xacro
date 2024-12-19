@@ -5,6 +5,7 @@
 
 <robot name = "differential_drive_robot" xmlns:xacro = "http://www.ros.org/wiki/xacro">
 
+<xacro:property name="camera_name" value="cam1"/>
 <!-- Body Dimensions (units in meters)-->
 <xacro:property name="body_link_x_dim" value="0.79"/>
 <xacro:property name="body_link_y_dim" value="0.5"/>
@@ -198,4 +199,29 @@ value = "${(1.0/12.0)*wheel_mass*(3.0*wheel_link_radius*wheel_link_radius + whee
 
     <xacro:inertia_wheel />
 </link>
+
+<!-- Camera Link -->
+<joint name = "camera_joint" type="fixed">
+    <parent link="body_link"/>
+    <child link="camera_link" />
+    <origin xyz="${body_link_x_dim/2} 0 ${body_link_z_dim/2}" />
+</joint>
+
+<link name="camera_link">
+    <visual>
+        <geometry>
+            <box size="0.010 0.03 0.03"/>
+        </geometry>
+        <material name="red"/>
+    </visual>
+</link>
+
+<joint name="camera_optical_joint" type="fixed">
+        <parent link="camera_link"/>
+        <child link="camera_link_optical"/>
+        <origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
+</joint>
+
+<link name="camera_link_optical"></link>
+
 </robot>
