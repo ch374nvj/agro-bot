@@ -33,6 +33,7 @@ install(
     model
     config
     # worlds
+    params
   DESTINATION 
     share/${PROJECT_NAME}/
 )

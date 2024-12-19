@@ -212,7 +212,7 @@ value = "${(1.0/12.0)*wheel_mass*(3.0*wheel_link_radius*wheel_link_radius + whee
         <geometry>
             <box size="0.010 0.03 0.03"/>
         </geometry>
-        <material name="red"/>
+        <!-- <material name="red"/> -->
     </visual>
 </link>
 

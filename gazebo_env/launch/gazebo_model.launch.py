@@ -72,6 +72,30 @@ def generate_launch_description():
         }]
     )
 
+    bridge_params = os.path.join(
+        get_package_share_directory('gazebo_env'),
+        'params',
+        'gz_to_ros.yaml'
+    )
+
+    start_gazebo_ros_bridge_cmd = Node(
+        package='ros_gz_bridge',
+        executable='parameter_bridge',
+        arguments=[
+            '--ros-args',
+            '-p',
+            f'config_file:={bridge_params}',
+        ],
+        output='screen',
+    )
+
+    start_gazebo_ros_image_bridge_cmd = Node(
+        package='ros_gz_image',
+        executable='image_bridge',
+        arguments=['/camera/image_raw'],
+        output='screen',
+    )
+
     #Create Empty Launch description object
     launch_description_obj = LaunchDescription()
 
@@ -82,5 +106,7 @@ def generate_launch_description():
     launch_description_obj.add_action(spawn_model_node)
     launch_description_obj.add_action(robot_state_pub_node)
     launch_description_obj.add_action(rviz2_launch_node)
+    launch_description_obj.add_action(start_gazebo_ros_bridge_cmd)
+    launch_description_obj.add_action(start_gazebo_ros_image_bridge_cmd)
 
     return launch_description_obj

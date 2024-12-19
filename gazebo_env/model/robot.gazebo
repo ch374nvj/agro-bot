@@ -37,7 +37,7 @@
 </gazebo>
 
 <gazebo reference= "camera_link">
-    <material>Gazebo/Red</material>
+    <material>Gazebo/DarkGrey</material>
 
     <sensor name="${camera_name}" type="camera">
         <pose>0 0 0 0 0 0</pose>
@@ -61,10 +61,10 @@
         <frame_name>camera_link_optical</frame_name>
         <alwaysOn>true</alwaysOn>
         <cameraName>${camera_name}</cameraName>
-        <imageTopicName>image_raw</imageTopicName>
+        <imageTopicName>camera/image_raw</imageTopicName>
         <updateRate>30.0</updateRate>
 
-        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <cameraInfoTopicName>camera/camera_info</cameraInfoTopicName>
         <!-- <depthImageTopicName>/${camera_name}/depth/image_raw</depthImageTopicName> -->
         <!-- <depthImageInfoTopicName>/${camera_name}/depth/camera_info</depthImageInfoTopicName> -->
         <!-- <pointCloudTopicName>/${camera_name}/depth/points</pointCloudTopicName> -->
