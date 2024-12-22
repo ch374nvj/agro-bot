@@ -52,7 +52,7 @@
             </image>
             <clip>
                 <near>0.05</near>
-                <far>8.0</far>
+                <far>800.0</far>
             </clip>
         </camera>
 
