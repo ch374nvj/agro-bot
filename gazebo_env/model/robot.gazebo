@@ -58,17 +58,6 @@
 
         <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
             <frame_name>camera_link_optical</frame_name>
-            <!-- <alwaysOn>true</alwaysOn>
-            <cameraName>${camera_name}</cameraName>
-            <imageTopicName>camera/image_raw</imageTopicName>
-            <updateRate>30.0</updateRate> -->
-
-            <!-- <cameraInfoTopicName>camera/camera_info</cameraInfoTopicName> -->
-            <!-- <depthImageTopicName>/${camera_name}/depth/image_raw</depthImageTopicName> -->
-            <!-- <depthImageInfoTopicName>/${camera_name}/depth/camera_info</depthImageInfoTopicName> -->
-            <!-- <pointCloudTopicName>/${camera_name}/depth/points</pointCloudTopicName> -->
-            <!-- <frameName>${frame_name}</frameName> -->
-
         </plugin>
     </sensor>
 

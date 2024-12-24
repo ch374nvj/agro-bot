@@ -34,6 +34,7 @@ install(
     config
     # worlds
     params
+    meshes
   DESTINATION 
     share/${PROJECT_NAME}/
 )

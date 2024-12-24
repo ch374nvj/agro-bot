@@ -130,150 +130,150 @@
         </link>
       </model>
       <model name='oak_tree'>
-        <pose>-12.8019 -40.5478 -1.24407 0 -0 0</pose>
+        <pose>20.7633 -5.64374 -1.24407 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>-12.8019 -40.5478 -1.24407 0 -0 0</pose>
+          <pose>20.7633 -5.64374 -1.24407 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='oak_tree_clone'>
-        <pose>-13.2921 -31.9374 -1.24407 0 -0 0</pose>
+        <pose>21.3542 3.08818 -1.24407 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>-13.2921 -31.9374 -1.24407 0 -0 0</pose>
+          <pose>21.3542 3.08818 -1.24407 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='oak_tree_clone_0'>
-        <pose>-16.3686 -25.4121 -1.24407 0 -0 0</pose>
+        <pose>20.8905 13.5757 -1.24407 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>-16.3686 -25.4121 -1.24407 0 -0 0</pose>
+          <pose>20.8905 13.5757 -1.24407 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='oak_tree_clone_1'>
-        <pose>-25.3033 -40.5801 -1.24407 0 -0 0</pose>
+        <pose>8.30527 -5.92901 -1.24407 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>-25.3033 -40.5801 -1.24407 0 -0 0</pose>
+          <pose>8.30527 -5.92901 -1.24407 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='oak_tree_clone_2'>
-        <pose>-26.423 -33.3857 -1.24407 0 -0 0</pose>
+        <pose>8.81294 2.99631 -1.24407 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>-26.423 -33.3857 -1.24407 0 -0 0</pose>
+          <pose>8.81294 2.99631 -1.24407 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='oak_tree_clone_3'>
-        <pose>-27.9837 -25.854 -1.24407 0 -0 0</pose>
+        <pose>7.87997 12.9092 -1.24407 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>-27.9837 -25.854 -1.24407 0 -0 0</pose>
+          <pose>7.87997 12.9092 -1.24407 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='oak_tree_clone_4'>
-        <pose>-29.8394 -17.6316 -1.24407 0 -0 0</pose>
+        <pose>7.82965 23.4919 -1.24407 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>-29.8394 -17.6316 -1.24407 0 -0 0</pose>
+          <pose>7.82965 23.4919 -1.24407 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='oak_tree_clone_5'>
-        <pose>-16.3265 -17.2211 -1.24407 0 -0 0</pose>
+        <pose>19.7666 25.2884 -1.24407 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>-16.3265 -17.2211 -1.24407 0 -0 0</pose>
+          <pose>19.7666 25.2884 -1.24407 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='oak_tree_clone_6'>
-        <pose>-31.8767 -8.99836 -1.24407 0 -0 0</pose>
+        <pose>8.46924 34.2874 -1.24407 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>-31.8767 -8.99836 -1.24407 0 -0 0</pose>
+          <pose>8.46924 34.2874 -1.24407 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='oak_tree_clone_7'>
-        <pose>-18.0928 -9.23895 -1.24407 0 -0 0</pose>
+        <pose>20.5991 34.8193 -1.24407 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>-18.0928 -9.23895 -1.24407 0 -0 0</pose>
+          <pose>20.5991 34.8193 -1.24407 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='oak_tree_clone_8'>
-        <pose>-40.4566 -41.4724 0.357169 0 -0 0</pose>
+        <pose>-4.47687 -5.3617 -1.1188 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>-40.4566 -41.4724 0.357169 0 -0 0</pose>
+          <pose>-4.47687 -5.3617 -1.1188 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='oak_tree_clone_8_clone'>
-        <pose>-40.4589 -33.8878 0.357169 0 -0 0</pose>
+        <pose>-3.9904 3.97833 -1.17585 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>-40.4589 -33.8878 0.357169 0 -0 0</pose>
+          <pose>-3.9904 3.97833 -1.17585 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='oak_tree_clone_8_clone_0'>
-        <pose>-41.4013 -26.299 0.357169 0 -0 0</pose>
+        <pose>-4.58714 12.724 -1.16178 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>-41.4013 -26.299 0.357169 0 -0 0</pose>
+          <pose>-4.58714 12.724 -1.16178 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='oak_tree_clone_8_clone_1'>
-        <pose>-43.6751 -19.2151 0.357169 0 -0 0</pose>
+        <pose>-4.30364 23.2181 -1.10104 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>-43.6751 -19.2151 0.357169 0 -0 0</pose>
+          <pose>-4.30364 23.2181 -1.10104 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='oak_tree_clone_8_clone_2'>
-        <pose>-45.7583 -11.2281 0.357169 0 -0 0</pose>
+        <pose>-5.11138 33.4724 -1.05124 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>-45.7583 -11.2281 0.357169 0 -0 0</pose>
+          <pose>-5.11138 33.4724 -1.05124 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -1245,7 +1245,7 @@
     </model>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>-19.9404 -43.0378 -0.236172 0 0.237042 0.785775</pose>
+        <pose>-5.82996 -18.4431 2.00071 0 0.249042 0.981775</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>

@@ -56,7 +56,7 @@ def generate_launch_description():
         package='gazebo_ros',
         executable='spawn_entity.py',
         arguments=['-topic', 'robot_description', '-entity', robot_xacro_name, 
-        '-x', '-18.4387', '-y', "-41.5350", '-z', "-0.7494", '-Y', "1.57" # -Y => yaw, -R => roll, -P => pitch
+        '-x', '-0.08', '-y', "-8.37", '-z', "-0.758", '-Y', "1.57" # -Y => yaw, -R => roll, -P => pitch
         ],
         output='screen'
     )
