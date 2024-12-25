@@ -115,10 +115,10 @@
       <pose>-21.0654 -12.8784 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>2989 249000000</sim_time>
-      <real_time>4651 113947349</real_time>
-      <wall_time>1733927363 325382024</wall_time>
-      <iterations>2989249</iterations>
+      <sim_time>0</sim_time>
+      <real_time>0</real_time>
+      <wall_time>0</wall_time>
+      <iterations>0</iterations>
       <model name='heightmap'>
         <pose>-21.0654 -12.8784 0 0 -0 0</pose>
         <scale>1 1 1</scale>

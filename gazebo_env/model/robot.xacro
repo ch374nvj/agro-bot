@@ -13,7 +13,7 @@
 
 <!-- Wheel Dimensions -->
 <xacro:property name="wheel_link_radius" value="0.125"/>
-<xacro:property name="wheel_link_length" value="0.05"/>
+<xacro:property name="wheel_link_length" value="1"/>
 <xacro:property name="wheel_mesh_scale"  value="${wheel_link_radius/125}" />
 <xacro:property name="wheel_link_z_loc" value="-0.05"/>
 
@@ -98,7 +98,7 @@ value = "${(1.0/12.0)*wheel_mass*(3.0*wheel_link_radius*wheel_link_radius + whee
 <!-- Link -->
 <link name="rwr_link">
     <visual>
-        <origin rpy="${pi_const/2} 0 ${-pi_const/2}" xyz="0 0 0" /> <!-- Rotate by 90deg -->
+        <origin rpy="${pi_const/2} 0 ${-pi_const/2}" xyz="0 0.5 0" /> <!-- Rotate by 90deg -->
         <geometry>
             <mesh filename="file://$(find gazebo_env)/meshes/wheel.stl" scale="${wheel_mesh_scale} ${wheel_mesh_scale} ${wheel_mesh_scale}" />
         </geometry>
@@ -127,7 +127,7 @@ value = "${(1.0/12.0)*wheel_mass*(3.0*wheel_link_radius*wheel_link_radius + whee
 <!-- Link  -->
 <link name="rwl_link">
     <visual>
-        <origin rpy="${pi_const/2} 0 ${pi_const/2}" xyz="0 0 0" /> <!-- Rotate by 90deg -->
+        <origin rpy="${pi_const/2} 0 ${pi_const/2}" xyz="0 -0.5 0" /> <!-- Rotate by 90deg -->
         <geometry>
             <mesh filename="file://$(find gazebo_env)/meshes/wheel.stl" scale="${wheel_mesh_scale} ${wheel_mesh_scale} ${wheel_mesh_scale}" />
         </geometry>
@@ -156,7 +156,7 @@ value = "${(1.0/12.0)*wheel_mass*(3.0*wheel_link_radius*wheel_link_radius + whee
 <!-- Link  -->
 <link name="fwr_link">
     <visual>
-        <origin rpy="${pi_const/2} 0 ${-pi_const/2}" xyz="0 0 0" /> <!-- Rotate by 90deg -->
+        <origin rpy="${pi_const/2} 0 ${-pi_const/2}" xyz="0 0.5 0" /> <!-- Rotate by 90deg -->
         <geometry>
             <mesh filename="file://$(find gazebo_env)/meshes/wheel.stl" scale="${wheel_mesh_scale} ${wheel_mesh_scale} ${wheel_mesh_scale}" />
         </geometry>
@@ -185,7 +185,7 @@ value = "${(1.0/12.0)*wheel_mass*(3.0*wheel_link_radius*wheel_link_radius + whee
 <!-- Link  -->
 <link name="fwl_link">
     <visual>
-        <origin rpy="${pi_const/2} 0 ${pi_const/2}" xyz="0 0 0" /> <!-- Rotate by 90deg -->
+        <origin rpy="${pi_const/2} 0 ${pi_const/2}" xyz="0 -0.5 0" /> <!-- Rotate by 90deg --> <!-- xyz values purely for visualization, doesn't affect simulation -->
         <geometry>
             <mesh filename="file://$(find gazebo_env)/meshes/wheel.stl" scale="${wheel_mesh_scale} ${wheel_mesh_scale} ${wheel_mesh_scale}" />
         </geometry>
