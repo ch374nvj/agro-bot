@@ -225,4 +225,24 @@ value = "${(1.0/12.0)*wheel_mass*(3.0*wheel_link_radius*wheel_link_radius + whee
 
 <link name="camera_link_optical"></link>
 
+<!-- Lidar Link  -->
+<joint name="lidar_joint" type="fixed">
+    <parent link="body_link" />
+    <child link="lidar_link" />
+    <origin xyz="${-body_link_x_dim/2+0.1} 0 ${body_link_z_dim/2+0.02}" />
+</joint>
+
+<link name="lidar_link">
+    <visual>
+        <geometry>
+            <cylinder radius="0.08" length="0.04"/>
+        </geometry>
+    </visual>
+    <collision>
+        <geometry>
+            <cylinder radius="0.08" length="0.04"/>
+        </geometry>
+    </collision>
+</link>
+
 </robot>
