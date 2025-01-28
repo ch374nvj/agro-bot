@@ -35,6 +35,7 @@ install(
     # worlds
     params
     meshes
+    maps
   DESTINATION 
     share/${PROJECT_NAME}/
 )
