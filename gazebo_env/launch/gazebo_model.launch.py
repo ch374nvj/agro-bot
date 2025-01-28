@@ -72,6 +72,14 @@ def generate_launch_description():
         }]
     )
 
+    # TF for Lidar Scanner b/w dummy and laser_frame
+    static_tf_laser_frame_pub_node = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        arguments=['0','0','0','0','0','0','dummy','laser_frame'],
+    )
+
+    # Gazebo -> ROS Bridge 
     bridge_params = os.path.join(
         get_package_share_directory('gazebo_env'),
         'params',
@@ -106,6 +114,7 @@ def generate_launch_description():
     launch_description_obj.add_action(spawn_model_node)
     launch_description_obj.add_action(robot_state_pub_node)
     launch_description_obj.add_action(rviz2_launch_node)
+    launch_description_obj.add_action(static_tf_laser_frame_pub_node)
     launch_description_obj.add_action(start_gazebo_ros_bridge_cmd)
     launch_description_obj.add_action(start_gazebo_ros_image_bridge_cmd)
 
