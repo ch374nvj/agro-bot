@@ -72,7 +72,7 @@ def generate_launch_description():
         }]
     )
 
-    # TF for Lidar Scanner b/w dummy and laser_frame
+    # TF for Lidar Scanner; tf b/w dummy and laser_frame
     static_tf_laser_frame_pub_node = Node(
         package='tf2_ros',
         executable='static_transform_publisher',
