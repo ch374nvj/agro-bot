@@ -48,7 +48,8 @@ def generate_launch_description():
         namespace='',
         executable='rviz2',
         name='rviz',
-        arguments=['-d' + os.path.join(get_package_share_directory(pkg_name), 'config', 'config.rviz')]
+        arguments=[' -d' + os.path.join(get_package_share_directory(pkg_name), 'config', 'config.rviz')],
+        parameters=[{'use_sim_time':True}],
     )
 
     #gazebo_ros Node to spawn model
@@ -133,6 +134,6 @@ def generate_launch_description():
     launch_description_obj.add_action(start_gazebo_ros_bridge_cmd)
     launch_description_obj.add_action(start_gazebo_ros_image_bridge_cmd)
     # launch_description_obj.add_action(declare_mapper_params_online_async)
-    # launch_description_obj.add_action(launch_online_async_mapper)
+    launch_description_obj.add_action(launch_online_async_mapper)
 
     return launch_description_obj
