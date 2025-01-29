@@ -1,4 +1,4 @@
-image: tree_farm_save.pgm
+image: map.pgm
 mode: trinary
 resolution: 0.05
 origin: [-18.3, -13.9, 0]
