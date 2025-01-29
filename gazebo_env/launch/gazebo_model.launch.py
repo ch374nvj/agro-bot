@@ -119,22 +119,6 @@ def generate_launch_description():
         launch_arguments=[('slam_params_file', mapper_params_online_async_dir),('use_sim_time','true')],
     )
 
-    #Nav2 Launch
-    navigation_launch_nav2 = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(
-            os.path.join(get_package_share_directory('gazebo_env'), 'launch', 'navigation_launch.py'),
-        ),
-        launch_arguments=[('use_sim_time','true')],
-    )
-
-    slam_map = os.path.join(get_package_share_directory('gazebo_env'), 'maps', 'map')
-    localization_launch_nav2 = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(
-            os.path.join(get_package_share_directory('gazebo_env'), 'launch', 'localization_launch.py'),
-        ),
-        launch_arguments=[('use_sim_time','true'), ('map', slam_map+'.yaml')]
-    )
-
     #Create Empty Launch description object
     launch_description_obj = LaunchDescription()
 
@@ -150,7 +134,5 @@ def generate_launch_description():
     launch_description_obj.add_action(start_gazebo_ros_image_bridge_cmd)
     # launch_description_obj.add_action(declare_mapper_params_online_async)
     # launch_description_obj.add_action(launch_online_async_mapper)
-    # launch_description_obj.add_action(navigation_launch_nav2)
-    # launch_description_obj.add_action(localization_launch_nav2)
 
     return launch_description_obj
