@@ -48,7 +48,7 @@ def generate_launch_description():
         namespace='',
         executable='rviz2',
         name='rviz',
-        arguments=[' -d' + os.path.join(get_package_share_directory(pkg_name), 'config', 'config.rviz')],
+        arguments=['-d' + os.path.join(get_package_share_directory(pkg_name), 'config', 'config.rviz')],
         parameters=[{'use_sim_time':True}],
     )
 
