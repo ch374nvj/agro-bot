@@ -73,7 +73,7 @@ value = "${(1.0/12.0)*wheel_mass*(3.0*wheel_link_radius*wheel_link_radius + whee
 <link name="body_link" >
     <visual>
         <geometry>
-            <box size="${body_link_x_dim} ${body_link_y_dim} ${body_link_z_dim}" />
+            <mesh filename="file://$(find gazebo_env)/meshes/body.stl" scale="${wheel_mesh_scale} ${wheel_mesh_scale} ${wheel_mesh_scale}" />
         </geometry>
     <origin rpy="0 0 0" xyz="0 0 0" />
     </visual>
@@ -100,7 +100,7 @@ value = "${(1.0/12.0)*wheel_mass*(3.0*wheel_link_radius*wheel_link_radius + whee
 <joint name="rwr_joint" type="continuous" >
     <parent link="body_link" />
     <child  link="rwr_link"  />
-    <origin xyz="${-body_link_x_dim/2} ${-(body_link_y_dim/2 + wheel_link_length/2)} ${wheel_link_z_loc}" rpy = "0 0 0" />
+    <origin xyz="${-body_link_x_dim/2+0.1} ${-(body_link_y_dim/2 + wheel_link_length/2)} ${wheel_link_z_loc+0.05}" rpy = "0 0 0" />
     <axis xyz = "0 1 0"/> <!-- Revolves around y axis-->
     <limit effort="1000" velocity="1000"/>
     <dynamics damping="1.0" friction="1.0" />
@@ -130,7 +130,7 @@ value = "${(1.0/12.0)*wheel_mass*(3.0*wheel_link_radius*wheel_link_radius + whee
 <joint name="rwl_joint" type="continuous" >
     <parent link="body_link" />
     <child  link="rwl_link"  />
-    <origin xyz="${-body_link_x_dim/2} ${(body_link_y_dim/2 + wheel_link_length/2)} ${wheel_link_z_loc}" rpy = "0 0 0" />
+    <origin xyz="${-body_link_x_dim/2+0.1} ${(body_link_y_dim/2 + wheel_link_length/2)} ${wheel_link_z_loc+0.05}" rpy = "0 0 0" />
     <axis xyz = "0 1 0"/> <!-- Revolves around y axis-->
     <limit effort="1000" velocity="1000"/>
     <dynamics damping="1.0" friction="1.0" />
@@ -159,7 +159,7 @@ value = "${(1.0/12.0)*wheel_mass*(3.0*wheel_link_radius*wheel_link_radius + whee
 <joint name="fwr_joint" type="continuous" >
     <parent link="body_link" />
     <child  link="fwr_link"  />
-    <origin xyz="${body_link_x_dim/2} ${-(body_link_y_dim/2 + wheel_link_length/2)} ${wheel_link_z_loc}" rpy = "0 0 0" />
+    <origin xyz="${body_link_x_dim/2-0.1} ${-(body_link_y_dim/2 + wheel_link_length/2)} ${wheel_link_z_loc+0.05}" rpy = "0 0 0" />
     <axis xyz = "0 1 0"/> <!-- Revolves around y axis-->
     <limit effort="1000" velocity="1000"/>
     <dynamics damping="1.0" friction="1.0" />
@@ -188,7 +188,7 @@ value = "${(1.0/12.0)*wheel_mass*(3.0*wheel_link_radius*wheel_link_radius + whee
 <joint name="fwl_joint" type="continuous" >
     <parent link="body_link" />
     <child  link="fwl_link"  />
-    <origin xyz="${body_link_x_dim/2} ${(body_link_y_dim/2 + wheel_link_length/2)} ${wheel_link_z_loc}" rpy = "0 0 0" />
+    <origin xyz="${body_link_x_dim/2-0.1} ${(body_link_y_dim/2 + wheel_link_length/2)} ${wheel_link_z_loc+0.05}" rpy = "0 0 0" />
     <axis xyz = "0 1 0"/> <!-- Revolves around y axis-->
     <limit effort="1000" velocity="1000"/>
     <dynamics damping="1.0" friction="1.0" />
@@ -240,7 +240,7 @@ value = "${(1.0/12.0)*wheel_mass*(3.0*wheel_link_radius*wheel_link_radius + whee
 <joint name="lidar_joint" type="fixed">
     <parent link="body_link" />
     <child link="lidar_link" />
-    <origin xyz="${-body_link_x_dim/2+0.1} 0 ${body_link_z_dim/2+0.02}" />
+    <origin xyz="${-body_link_x_dim/2+0.1} 0 ${body_link_z_dim/2+0.09}" />
 </joint>
 
 <link name="lidar_link">
