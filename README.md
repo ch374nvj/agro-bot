@@ -4,6 +4,7 @@
 
 Hey there! This project is all about simulating a differential drive robot in a 3D farm environment using Gazebo. The goal? To get hands-on with ROS2, mapping, and autonomous navigation. Here's what's inside:
 
+- **🌞 Gazebo**: A realistic 3D Farm environment created using a heightmap that imitates uneven surface of land.  
 - **🗺️ SLAM Toolbox**: Used for mapping the farm environment.
 - **🛠️ Nav2 Stack**: Still working on getting this running smoothly!
 - **🛠️ Custom Robot Model**: Designed the robot body using Onshape and integrated it into Gazebo for visualization.
@@ -18,8 +19,8 @@ This project is just me experimenting and learning ROS2, so feel free to check i
    ```
 2. Clone the repository:
    ```bash
-   cd ./src
-   git clone git@github.com:ch374nvj/agro-bot.git .
+   cd ros_ws
+   git clone git@github.com:ch374nvj/agro-bot.git src
    ```
 3. Launch the Gazebo simulation:
    ```bash
@@ -50,6 +51,8 @@ This project is just me experimenting and learning ROS2, so feel free to check i
 ![Gazebo Simulation](gazebo_env/images/gazebo.png "Gazebo simulation environment")
 <p align="center"> <i>Gazebo simulation</i> </p>
 
+![Robot in Gazebo](gazebo_env/images/robot_gazebo.png)
+<p align="center"> <i>Robot inside gazebo environment</i> </p>
 
 ![RViz Visualization](gazebo_env/images/rviz.png "RViz with the map")
 <p align="center"> <i>RViz with map</i> </p>
