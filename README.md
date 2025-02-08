@@ -1,4 +1,4 @@
-# 🤖 ***agro-bot*** A Differential Drive Robot in 3D Farm Simulation (ROS2) 🚜
+# 🤖 ***agro-bot***: A Differential Drive Robot in 3D Farm Simulation (ROS2) 🚜
 ###### Not so original name, sorry😅
 ## Overview 🌍
 
