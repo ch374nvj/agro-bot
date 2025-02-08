@@ -221,9 +221,9 @@ value = "${(1.0/12.0)*wheel_mass*(3.0*wheel_link_radius*wheel_link_radius + whee
 
 <link name="camera_link">
     <visual>
-        <geometry>
+        <!-- <geometry>
             <box size="0.010 0.03 0.03"/>
-        </geometry>
+        </geometry> -->
         <!-- <material name="red"/> -->
     </visual>
 </link>
