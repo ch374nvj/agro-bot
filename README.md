@@ -63,7 +63,8 @@ This project is just me experimenting and learning ROS2, so feel free to check i
 - [ ] 🎯 Tune navigation parameters for better path planning
 - [ ] 🚧 Add obstacle avoidance mechanisms
 - [ ] 🤖 Optimize robot control for smoother movement
-- [ ] 🌾 Improve simulation environment and update Robot description (![robot.xacro](gazebo_env/model/robot.xacro)) for realism
+- [ ] 🌾 Improve simulation environment and update Robot description ([robot.xacro](gazebo_env/model/robot.xacro)) for realism
 
 ## Contributing 🙌
 Want to help out? Open an issue or submit a pull request – any contributions are welcome! 😄
+<p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
